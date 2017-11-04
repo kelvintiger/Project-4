@@ -29,14 +29,27 @@ using namespace std;
 void test_point();
 void test_Color();
 void test_Graphics();
+void test_Line();
+void test_Triangle();
+void test_Circle();
+void test_Rectangle();
 
 //Main testing
 int main() {
+    
     test_point();
     
     test_Color();
     
+    test_Graphics();
     
+    test_Line();
+    
+    test_Triangle();
+    
+    test_Circle();
+    
+    test_Rectangle();
     
     return 0;
 }
@@ -124,4 +137,15 @@ void test_Color(){
     
 }
 
-
+void test_Line(){
+    
+    Point p1;
+    Point p2;
+    Color c1(50, 50, 50);
+    
+    Line l1(p1, p2, c1);
+    ifstream input_file;
+    input_file.open("lines.txt");
+    l1.read(input_file);
+    cout << "l1 is: " << l1 << endl;
+}
