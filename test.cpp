@@ -149,3 +149,42 @@ void test_Line(){
     l1.read(input_file);
     cout << "l1 is: " << l1 << endl;
 }
+
+void test_Triangle(){
+    
+    Point p1;
+    Point p2;
+    Point p3;
+    Color c1(50, 50, 50);
+    
+    Triangle t1(p1, p2, p3, c1);
+    ifstream input_file;
+    input_file.open("triangles.txt");
+    t1.read(input_file);
+    cout << "t1 is: " << t1 << endl;
+}
+
+void test_Circle(){
+    
+    Point p1;
+    Color c1(50, 50, 50);
+    
+    Circle circle1 (p1, 5, c1);
+    ifstream input_file;
+    input_file.open("circles.txt");
+    circle1.read(input_file);
+    cout << "circle1 is: " << circle1 << endl;
+}
+
+void test_Rectangle(){
+    
+    Point p1;
+    Point p2;
+    Color c1(50, 50, 50);
+    
+    Rectangle rec1 (p1, p2, c1);
+    ifstream input_file;
+    input_file.open("rectangles.txt");
+    rec1.read(input_file);
+    cout << "rec1 is: " << rec1 << endl;
+}
